@@ -141,7 +141,7 @@ final class Container implements ArrayAccess, ContainerContract
     public static function instance()
     {
 
-        if (is_null(static::$instance)) {
+        if (static::$instance === null) {
             static::$instance = new static;
         }
 
