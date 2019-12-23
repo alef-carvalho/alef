@@ -1,0 +1,43 @@
+{
+  "name": "alef-carvalho/framework",
+  "description": "The next generation of PHP frameworks.",
+  "keywords": ["php", "framework", "alef"],
+  "license": "MIT",
+  "homepage": "https://alefcarvalho.com.br",
+  "support": {
+    "issues": "https://github.com/alef-carvalho/framework/issues",
+    "source": "https://github.com/alef-carvalho/framework"
+  },
+  "authors": [
+    {
+      "name": "Alef Carvalho",
+      "email": "alef@alefcarvalho.com.br"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "php": "^7.2",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
+    "psr/container": "^1.0",
+    "symfony/var-dumper": "^5.0"
+  },
+  "autoload": {
+    "files": [],
+    "psr-4": {
+      "Alef\\": "src/"
+    }
+  },
+  "suggest": {
+    "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
+    "ext-memcached": "Required to use the memcache cache driver.",
+    "ext-pcntl": "Required to use all features of the queue worker.",
+    "ext-posix": "Required to use all features of the queue worker.",
+    "ext-redis": "Required to use the Redis cache and queue drivers."
+  }
+}
