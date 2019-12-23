@@ -10,25 +10,33 @@ interface ContainerContract extends ContainerInterface
 {
 
     /**
-     * Register a binding with the container.
+     * Register a new binding in container.
      *
-     * @param  string  $id
-     * @param  Closure $closure
+     * @param string $id
+     * @param Closure $closure
      * @return void
-    */
+     */
     public function set($id, Closure $closure);
 
     /**
-     * Register a shared binding in the container.
+     * Extend a binding definition without necessarily loading that object.
      *
-     * @param  string  $id
-     * @param  Closure $closure
+     * @param $id
+     * @param Closure $closure
+     */
+    public function extend($id, Closure $closure);
+
+    /**
+     * Register a singleton binding in container.
+     *
+     * @param string $id
+     * @param Closure $closure
      * @return void
-    */
+     */
     public function singleton($id, Closure $closure);
 
     /**
-     * Flush the container of all bindings and resolved instances.
+     * Clear container bindings.
      *
      * @return void
      */
