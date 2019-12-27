@@ -12,7 +12,7 @@ class Router
      *
      * @var array
      */
-    public static $supported = [
+    public static $allowed = [
         'GET', 'HEAD', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'
     ];
 
